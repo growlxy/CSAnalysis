@@ -1,1 +1,1 @@
-from .web_spider import getData
+from .job_spider import getData

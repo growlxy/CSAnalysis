@@ -1,4 +1,4 @@
-from spider.web_spider import getData
+from spider.job_spider import getData
 
 if __name__ == '__main__':
     pass
