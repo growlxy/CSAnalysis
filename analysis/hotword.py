@@ -32,7 +32,10 @@ def create_pic(pos):
                    background_color="white",
                    repeat=False,
                    mask=mask)
-    wc.generate_from_frequencies(frequencies)
+    try:
+        wc.generate_from_frequencies(frequencies)
+    except ValueError:
+        raise Exception('数据里没有对应的关键词')
 
     import matplotlib.pyplot as plt
     plt.imshow(wc, interpolation='bilinear')
@@ -61,4 +64,4 @@ def preprocessing_word(fea):
 
 if __name__ == '__main__':
     # get_csv_name()
-    create_pic(get_csv_name()[4])
+    create_pic(get_csv_name()[1])
