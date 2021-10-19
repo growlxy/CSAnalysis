@@ -21,6 +21,7 @@ word = '' # key word
 getData(word)
 ```
 it will generate a collection of csv files in ```./analysis``` directory.
+
 3. run 
 ``` 
 word = '' # key word
