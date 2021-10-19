@@ -1,0 +1,1 @@
+from .hotword import create_pic
