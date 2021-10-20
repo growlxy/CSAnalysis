@@ -38,7 +38,8 @@ def getData(kd):
         sys.stdout.flush()
         try:
             if result == None:
-                print(f'爬取中断，只爬取了{page-1}页，请稍后再试')
+                print(f'\n爬取中断，只爬取了{page-1}页，请稍后再试')
+                return None
         except ValueError:
             if page == 1:
                 temp = result
