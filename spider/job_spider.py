@@ -2,6 +2,7 @@ import os
 import sys
 import random
 import time
+from urllib.parse import quote
 
 import pandas as pd
 from requests import post
@@ -17,8 +18,8 @@ def getData(kd):
             'Accept': 'application/json, text/javascript, */*; q=0.01',
             'Host': 'www.lagou.com',
             'Origin': 'https://www.lagou.com',
-            'Referer': 'https://www.lagou.com/jobs/list_python/p-city_0?&cl=false&fromSearch=true&labelWords=&suginput=',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'
+            'Referer': f'https://www.lagou.com/jobs/list_{quote(kd)}/p-city_0?&cl=false&fromSearch=true&labelWords=&suginput=',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3877.400 QQBrowser/10.8.4506.400'
         }
         form_data = {
             'first': 'false',
